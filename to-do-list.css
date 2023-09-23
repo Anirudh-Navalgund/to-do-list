@@ -4,6 +4,10 @@ body {
   background-color: rgb(29, 29, 29);
   color: white;
   margin: 0px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-start;
 }
 .title {
   font-size: 30px;
@@ -12,8 +16,8 @@ body {
 .todo-grid,
 .input-grid {
   display: grid;
-  grid-template-columns: 200px 140px 100px;
-  column-gap: 20px;
+  grid-template-columns: 190px 130px 70px;
+  column-gap: 15px;
   row-gap: 15px;
   align-items: center;
   word-wrap: break-word;
