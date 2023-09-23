@@ -16,7 +16,7 @@ body {
 .todo-grid,
 .input-grid {
   display: grid;
-  grid-template-columns: 190px 130px 70px;
+  grid-template-columns: 180px 85px 1fr;
   column-gap: 15px;
   row-gap: 15px;
   align-items: center;
@@ -31,6 +31,9 @@ body {
   padding: 8px 10px;
   border-radius: 5px;
   border: none;
+}
+.date-input {
+  font-size: 10px;
 }
 .date-input:hover {
   cursor: pointer;
@@ -62,10 +65,12 @@ body {
   font-size: 20px;
 }
 .todo-date-div {
-  font-size: 18px;
+  font-size: 15px;
 }
 .flex-container {
   display: flex;
   flex-direction: column;
   width: min-content;
+  min-width: 300px;
+  padding: 0px 10px;
 }
