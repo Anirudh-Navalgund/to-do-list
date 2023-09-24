@@ -17,7 +17,7 @@ function render_todo_list() {
         <button class="delete-button" onclick="
           todolist.splice(${i}, 1),
           render_todo_list()">
-          Delete
+          x
         </button>`;
     todolistHTML = todolistHTML + html;
   }
