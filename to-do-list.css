@@ -3,24 +3,28 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(29, 29, 29);
   color: white;
-  margin: 0px 5px;
+  padding: 0px 10px;
+  /*
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: flex-start;
+  */
 }
 .title {
   font-size: 30px;
   font-weight: bold;
 }
-.todo-grid,
-.input-grid {
+
+.input-grid,
+.todo-grid {
   display: grid;
-  grid-template-columns: 180px 85px 1fr;
-  column-gap: 15px;
+  grid-template-columns: 2fr 1fr 0.5fr;
+  max-width: 700px;
+  column-gap: 10px;
   row-gap: 15px;
+  overflow-wrap: break-word;
   align-items: center;
-  word-wrap: break-word;
 }
 .input-grid {
   margin-bottom: 20px;
@@ -33,7 +37,7 @@ body {
   border: none;
 }
 .date-input {
-  font-size: 10px;
+  padding: 7px 10px;
 }
 .date-input:hover {
   cursor: pointer;
@@ -42,9 +46,9 @@ body {
   background-color: rgb(0, 255, 0);
   border: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 26px;
   cursor: pointer;
-  padding: 8px;
+  padding: 2px 0px;
 }
 .add-button:hover {
   opacity: 0.6;
@@ -55,22 +59,44 @@ body {
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
-  padding: 8px;
+  font-size: 20px;
+  padding: 4px 0px;
 }
 .delete-button:hover {
   opacity: 0.6;
 }
 .todo-name-div {
   font-size: 20px;
+  padding: 5px 2px;
+  overflow: hidden; /* Prevent text overflow */
+  white-space: wrap; /* Prevent text from wrapping to the next line */
+  text-overflow:ellipsis;
 }
 .todo-date-div {
   font-size: 15px;
+  padding: 5px 2px;
+  overflow: hidden; /* Prevent text overflow */
+  white-space: wrap; /* Prevent text from wrapping to the next line */
+  text-overflow: ellipsis;
 }
+/*
 .flex-container {
   display: flex;
   flex-direction: column;
-  width: min-content;
   min-width: 300px;
+  width: min-content;
   padding: 0px 10px;
+}
+*/
+@media (max-width: 350px) {
+  .input-grid,
+  .todo-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .add-button,
+  .delete-button {
+    font-size: 18px;
+    padding: 2px 0px;
+  }
 }
