@@ -19,7 +19,7 @@ body {
 .input-grid,
 .todo-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 0.5fr;
+  grid-template-columns: 2fr 1fr 1fr;
   max-width: 700px;
   column-gap: 10px;
   row-gap: 15px;
